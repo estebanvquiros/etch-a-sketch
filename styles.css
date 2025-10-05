@@ -4,7 +4,8 @@
     --color-complementary: #4f8cf2;
     --color-text: #0e1015;
     --color-background: #fbfcfd;
-    --color-background-toned-down: #cccdce;
+    --color-background-toned-down-100: #cccdce;
+    --color-background-toned-down-200: #a0a0a1;
 }
 
 * {
@@ -39,6 +40,7 @@ body {
 
 .main {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 1;
@@ -51,8 +53,14 @@ body {
     flex-wrap: wrap;
 }
 
+.draw-instructions {
+    padding: 20px;
+    color: var(--color-background-toned-down-200);
+    text-align: center;
+}
+
 .grid-cell {
-    background-color: var(--color-background-toned-down);
+    background-color: var(--color-background-toned-down-100);
 }
 
 .grid-cell:hover {

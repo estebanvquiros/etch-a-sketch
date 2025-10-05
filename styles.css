@@ -55,6 +55,10 @@ body {
     background-color: var(--color-background-toned-down);
 }
 
+.grid-cell:hover {
+    background-color: var(--color-secondary);
+}
+
 /* Footer */
 
 footer {

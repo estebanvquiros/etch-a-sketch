@@ -57,13 +57,49 @@ body {
     padding: 20px;
     color: var(--color-background-toned-down-200);
     text-align: center;
+    font-size: 16px;
+    font-weight: 400;
 }
+
+/* Cells */
 
 .grid-cell {
     background-color: var(--color-background-toned-down-100);
+    cursor: crosshair;
+    transition: background-color 0.2s ease;
 }
 
 .grid-cell:hover {
+    background-color: var(--color-secondary);
+}
+
+.grid-cell.painted {
+    background-color: var(--color-text);
+}
+
+/* Buttons */
+
+.controls {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+.btn {
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--color-complementary);
+    cursor: pointer;
+}
+
+.btn:active {
     background-color: var(--color-secondary);
 }
 
@@ -75,5 +111,6 @@ footer {
     padding: 1rem 0;
     text-align: center;
     font-size: 18px;
+    font-weight: 600;
 }
 

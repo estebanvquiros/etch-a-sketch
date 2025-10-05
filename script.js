@@ -14,3 +14,29 @@ function generateGrid() {
 }
 
 generateGrid();
+
+let isSpaceBarPressed = false;
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === ' ') {
+        isSpaceBarPressed = true;
+    }
+});
+
+document.addEventListener("keyup", (event) => {
+    if (event.key === ' ') {
+        isSpaceBarPressed = false;
+    }
+});
+
+const cells = document.querySelectorAll(".grid-cell");
+cells.forEach(cell => {
+    
+    cell.addEventListener("mousedown", () => {
+        cell.style.backgroundColor = "#0e1015";
+    });
+
+    cell.addEventListener("mousemove", () => {
+        if (isSpaceBarPressed) cell.style.backgroundColor = "#0e1015";
+    });
+});
